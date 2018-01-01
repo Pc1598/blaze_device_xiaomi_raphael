@@ -392,13 +392,13 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2 \
+    android.hardware.power@1.0.vendor \
+    android.hardware.power@1.1.vendor \
     android.hardware.power@1.2.vendor \
-    android.hardware.power-service-qti \
-    android.hardware.power.stats@1.0-service.mock
+    android.hardware.power@1.2-service.raphael-libperfmgr
 
 PRODUCT_COPY_FILES += \
-    vendor/qcom/opensource/power/config/msmnile/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
+    $(LOCAL_PATH)/power/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # ZRAM writeback
 PRODUCT_PROPERTY_OVERRIDES += \
